@@ -1,0 +1,60 @@
+Installing Starkli
+
+The steps for installing Starkli and upgrading Starkli are identical.
+Procedure
+
+    Install Starkliup, the installer for the Starkli environment:
+
+    curl https://get.starkli.sh | sh
+
+Starkliup should now be installed.
+
+Restart the terminal.
+
+Install Starkli:
+
+starkliup
+
+Starkli should now be installed.
+
+Restart the terminal and run the following command to verify the installation:
+
+starkli --version
+
+
+
+export STARKNET_ACCOUNT=~/.starkli-wallets/deployer/account.json
+export STARKNET_KEYSTORE=~/.starkli-wallets/deployer/keystore.json
+
+
+
+
+Installing Scarb
+
+Scarb is compatible with macOS, Linux, and Windows operating systems.
+MacOS and Linux installation
+
+The steps for installing Scarb and upgrading Scarb are identical.
+Procedure
+
+    Open a terminal and execute the following command:
+
+    curl --proto '=https' --tlsv1.2 -sSf https://docs.swmansion.com/scarb/install.sh | sh
+
+Restart the terminal and run the following command to verify the installation:
+
+scarb --version
+
+Scarb should now be installed.
+Windows installation
+
+Scarb’s installation on Windows requires manual setup.
+Procedure
+
+    Follow the steps in the Scarb documentation.
+
+    Restart the terminal and run the following command to verify the installation:
+
+    scarb --version
+
+Scarb should now be installed.
