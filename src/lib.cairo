@@ -1,7 +1,7 @@
 mod interfaces {
-    pub mod Counter;
+    pub mod IERC20;
 }
 
 mod core {
-    pub mod Counter;
+    pub mod erc20dm;
 }

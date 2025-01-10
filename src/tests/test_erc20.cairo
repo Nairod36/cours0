@@ -4,9 +4,9 @@ mod test_erc20 {
         start_rollup, build_block_context, deploy_contract
     };
     use starknet::ContractAddress;
-    use crate::core::SimpleERC20::SimpleERC20Impl; // On importe l’impl
-    use crate::core::SimpleERC20::Storage;
-    use crate::core::SimpleERC20::ContractState;
+    use crate::core::erc20dm::erc20dmImpl; // On importe l’impl
+    use crate::core::erc20dm::Storage;
+    use crate::core::erc20dm::ContractState;
 
     #[test]
     fn test_initial_supply() {
@@ -29,11 +29,11 @@ mod test_erc20 {
         );
 
         // On check le totalSupply
-        let total_supply = SimpleERC20Impl::totalSupply(@contract_state);
+        let total_supply = erc20dmImpl::totalSupply(@contract_state);
         assert_eq!(total_supply, (1000, 0)); // (low=1000, high=0)
 
         // Optionnel : On check la balance du owner
-        let owner_balance = SimpleERC20Impl::balanceOf(@contract_state, ContractAddress::from_hex("0x123"));
+        let owner_balance = erc20dmImpl::balanceOf(@contract_state, ContractAddress::from_hex("0x123"));
         assert_eq!(owner_balance, (1000, 0));
     }
 }

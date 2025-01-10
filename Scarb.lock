@@ -2,7 +2,7 @@
 version = 1
 
 [[package]]
-name = "counter"
+name = "erc20dm"
 version = "0.1.0"
 dependencies = [
  "openzeppelin",

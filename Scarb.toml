@@ -1,5 +1,5 @@
 [package]
-name = "counter"
+name = "erc20dm"
 version = "0.1.0"
 edition = "2023_11"
 
@@ -14,6 +14,6 @@ starknet = "2.8.2"
 snforge_std = { git = "https://github.com/foundry-rs/starknet-foundry.git", tag = "v0.25.0" }
 
 [[target.starknet-contract]]
-name = "counter"
+name = "erc20dm"
 sierra = true
 casm = true
