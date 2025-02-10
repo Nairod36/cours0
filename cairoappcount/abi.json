@@ -1,0 +1,67 @@
+{
+"abi": [
+    {
+      "type": "impl",
+      "name": "CounterImpl",
+      "interface_name": "counter::interfaces::Counter::ICounter"
+    },
+    {
+      "type": "struct",
+      "name": "core::integer::u256",
+      "members": [
+        { "name": "low", "type": "core::integer::u128" },
+        { "name": "high", "type": "core::integer::u128" }
+      ]
+    },
+    {
+      "type": "interface",
+      "name": "counter::interfaces::Counter::ICounter",
+      "items": [
+        {
+          "type": "function",
+          "name": "change_value",
+          "inputs": [{ "name": "value", "type": "core::integer::u256" }],
+          "outputs": [],
+          "state_mutability": "external"
+        },
+        {
+          "type": "function",
+          "name": "get_value",
+          "inputs": [
+            {
+              "name": "address",
+              "type": "core::starknet::contract_address::ContractAddress"
+            }
+          ],
+          "outputs": [{ "type": "core::integer::u256" }],
+          "state_mutability": "view"
+        }
+      ]
+    },
+    {
+      "type": "constructor",
+      "name": "constructor",
+      "inputs": [{ "name": "initial_value", "type": "core::integer::u256" }]
+    },
+    {
+      "type": "event",
+      "name": "counter::core::Counter::Counter::Update",
+      "kind": "struct",
+      "members": [
+        { "name": "value", "type": "core::integer::u256", "kind": "key" }
+      ]
+    },
+    {
+      "type": "event",
+      "name": "counter::core::Counter::Counter::Event",
+      "kind": "enum",
+      "variants": [
+        {
+          "name": "Update",
+          "type": "counter::core::Counter::Counter::Update",
+          "kind": "nested"
+        }
+      ]
+    }
+  ]
+}
