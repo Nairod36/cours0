@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@starknet-react/chains": "^3.1.2",
+    "@starknet-react/core": "^3.7.2"
+  }
+}
